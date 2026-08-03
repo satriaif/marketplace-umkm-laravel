@@ -55,9 +55,17 @@ class OrderSeeder extends Seeder
                     $items = $ratings->splice(0, $take);
 
                     $order = Order::create([
-                        'user_id'     => $userId,
+                        'user_id' => $userId,
+
+                        'recipient_name' => 'User ' . $userId,
+                        'phone' => '081234567890',
+                        'province' => 'DKI Jakarta',
+                        'city' => 'Jakarta Selatan',
+                        'postal_code' => '12345',
+                        'address' => 'Jl. Contoh No. 123',
+
                         'total_price' => 0,
-                        'status'      => 'completed',
+                        'status' => 'completed',
                     ]);
 
                     $total = 0;
