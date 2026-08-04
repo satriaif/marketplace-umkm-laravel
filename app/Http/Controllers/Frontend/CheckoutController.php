@@ -110,8 +110,8 @@ public function confirmPayment(Order $order)
         'status' => 'paid'
     ]);
 
-    return redirect()
-        ->route('orders.index')
-        ->with('success', 'Pembayaran berhasil dikonfirmasi.');
+   return redirect()
+    ->route('orders.index')
+    ->with('payment_success', 'Pesanan Anda berhasil dibuat.');
 }
 }

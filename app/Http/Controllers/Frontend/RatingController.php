@@ -29,8 +29,8 @@ class RatingController extends Controller
 
     );
 
-    return redirect()
-    ->back()
-    ->with('success','Rating berhasil diberikan.');
+        return redirect()
+            ->back()
+            ->with('rating_success', 'Terima kasih telah memberikan penilaian.');
 }
 }

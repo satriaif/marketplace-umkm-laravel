@@ -505,23 +505,26 @@
 
 @section('js')
 
-@if(session('success'))
-
+@if(session('payment_success'))
 <script>
 Swal.fire({
-
    icon: 'success',
-
    title: 'Pembayaran Berhasil',
-
-   text: '{{ session('
-   success ') }}',
-
+   text: '{{ session("payment_success") }}',
    confirmButtonColor: '#198754'
-
 });
 </script>
+@endif
 
+@if(session('rating_success'))
+<script>
+Swal.fire({
+   icon: 'success',
+   title: 'Rating Berhasil',
+   text: '{{ session("rating_success") }}',
+   confirmButtonColor: '#0d6efd'
+});
+</script>
 @endif
 
 <script>
